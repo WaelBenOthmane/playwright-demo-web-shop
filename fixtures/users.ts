@@ -9,6 +9,6 @@ export const invalidCredentials = {
 }
 
 export const inexistUser = {
-    email: 'wael@hotmail.com',
-    password: '123Wael'
+    email: 'inexistuser@hotmail.com',
+    password: '123user'
 }

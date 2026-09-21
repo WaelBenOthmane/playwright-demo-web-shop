@@ -30,7 +30,7 @@ test.describe('Checkout feature', () => {
 
         await productPage.openProductSheet()
 
-        priceProduct = await productPage.getUnitePriceProduct()
+        priceProduct = await productPage.getUnitPriceProduct()
 
         await cartPage.addToCart()
         await cartPage.gotoCartPage()
