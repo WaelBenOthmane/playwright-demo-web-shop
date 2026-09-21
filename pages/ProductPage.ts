@@ -49,10 +49,15 @@ export class ProductPage {
         return await this.priceProduct.textContent()
     }
 
-    async getUnitePriceProduct() {
-        const priceRaw = await this.unitePrice.textContent()
-        const price = Number(priceRaw?.replace("$", ""));
-        return price
+    async getUnitPriceProduct() {
+
+        const unitPriceText = await this.unitePrice.textContent()
+
+        if (!unitPriceText) return 0;
+
+        const cleanUnitPriceText = unitPriceText.replace('$', '').replace(',', '').trim();
+
+        return parseFloat(cleanUnitPriceText);
     }
 
     async getProductsTitles() {
